@@ -1,0 +1,94 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! USERS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+post  
+
+http://localhost:3001/api/users
+
+{
+	"username": "4m299941999131",
+	"email": "as2d399931411a@gmail.com"
+}
+
+get
+
+
+get
+
+http://localhost:3001/api/users/673a936f95e93be4899d1a14
+
+
+put 
+
+
+{
+"username": "4m4d3u58752d42sss22sddddsss34234234"
+}
+
+delete
+
+
+postFriend
+
+
+http://localhost:3001/api/users/673aaadc7e24f6e9777295ac/friends/673aadac7bc9819b81e567b1
+
+
+delete friend
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! thoughts !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+post
+
+http://localhost:3001/api/thoughts
+
+{
+	"thoughtText" : "this is my original thought",
+	"username" : "4m4d3u5"
+}
+
+get
+
+
+
+
+getById
+
+http://localhost:3001/api/thoughts/673ac30d71928fae010411d1
+
+
+delete
+
+
+
+
+post
+
+
+http://localhost:3001/api/thoughts/673aab667e24f6e9777295e7/reactions
+
+
+{
+	"reactionBody" : "this is my reaction",
+	"username" : "4m4d3u5"
+}
+
+
+delete
+
+http://localhost:3001/api/thoughts/673aab667e24f6e9777295e7/reactions/673aacf7c6a03fbcba0382fc
+
+
+
+
+https://drive.google.com/file/d/139ZfsRceA5i8nRBxAMtyIMIaHxPlR6OM/view?usp=drive_link
+
+
+
+
+
+

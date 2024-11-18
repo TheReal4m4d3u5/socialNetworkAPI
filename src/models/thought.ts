@@ -60,6 +60,8 @@ const thoughtsSchema = new Schema<IThoughts>(
             type: String,
             required: true,
         },
+        //Type: An array of subdocuments. Subschema: Each reaction in the array follows
+        // its own set of rules defined in the reactionSchema.
         reactions: [reactionSchema],
     },
     {

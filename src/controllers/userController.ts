@@ -7,6 +7,7 @@ import { Request, Response } from 'express';
       .select('-__v') // Exclude the __v field
       .populate('thoughts', '-__v') // Populate thoughts and exclude __v if needed
       .populate('friends', '-__v'); // Populate friends and exclude __v if needed
+      
       res.json(users);
     } catch (err) {
       res.status(500).json(err)

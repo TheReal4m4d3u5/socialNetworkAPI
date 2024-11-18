@@ -7,6 +7,7 @@ import { getSingleThought, getThoughts, createThought } from '../../controllers/
 
 const router = Router();
 
+// organizes your routes better instead of writing each HTTP method separately.
 router.route('/').get(getThoughts).post(createThought);
 
 router.route('/:postId').get(getSingleThought);
@@ -37,8 +38,8 @@ router.post('/:thoughtId/reactions', async (req, res) => {
 
         const updatedThought = await Thought.findByIdAndUpdate(
             thoughtId,
-            { $push: { reactions: reaction } }, // Add the reaction as a subdocument
-            { new: true, runValidators: true }
+            { $push: { reactions: reaction } }, // Adds the new reaction object to the reactions array of the thought document. Add the reaction as a subdocument
+            { new: true, runValidators: true } //Ensures that the new reaction data adheres to the schema's validation rules.
         );
 
         if (!updatedThought) {
@@ -59,7 +60,7 @@ router.delete('/:thoughtId/reactions/:reactionId', async (req, res) => {
 
         const updatedThought = await Thought.findByIdAndUpdate(
             thoughtId,
-            { $pull: { reactions: { _id: reactionId } } }, 
+            { $pull: { reactions: { reactionId: reactionId } } }, 
             { new: true }
         );
 
