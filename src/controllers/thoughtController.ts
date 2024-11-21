@@ -14,12 +14,9 @@ export const getThoughts = async (_req: Request, res: Response) => {
 
 export const updatedThought = async (req: Request, res: Response) => {
   try {
-    // Extract the _id from the route parameters
-    const { id } = req.params;
 
     // Find and update the thought
-    const updatedThought = await Thought.findByIdAndUpdate(
-      id,
+    const updatedThought = await Thought.findByIdAndUpdate(req.params.Id,
       req.body,
       { new: true, runValidators: true }
     );

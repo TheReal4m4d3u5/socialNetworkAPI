@@ -12,10 +12,8 @@ export const getThoughts = async (_req, res) => {
 };
 export const updatedThought = async (req, res) => {
     try {
-        // Extract the _id from the route parameters
-        const { id } = req.params;
         // Find and update the thought
-        const updatedThought = await Thought.findByIdAndUpdate(id, req.body, { new: true, runValidators: true });
+        const updatedThought = await Thought.findByIdAndUpdate(req.params.Id, req.body, { new: true, runValidators: true });
         if (!updatedThought) {
             return res.status(404).json({ message: 'Thought not found' });
         }
